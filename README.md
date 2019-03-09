@@ -21,6 +21,15 @@ cargo install -f wasm-bindgen@0.2.29 # Or download a release binary
 http-server --open
 ```
 
+or you can use `wasm-pack` and python3's simple httpserver module
+
+``` sh
+wasm-pack build --target no-modules
+cp pkg/webgl_water_tutorial.js ./
+cp pkg/webgl_water_tutorial_bg.wasm ./
+python3 server.py # http://localhost:8000
+```
+
 # See Also
 
 - [ThinMatrix's OpenGL Water Tutorial](https://www.youtube.com/watch?v=HusvGeEDU_U&list=PLRIWtICgwaX23jiqVByUs0bqhnalNTNZh) - Heavily inspired this WebGL implementation
